@@ -5,7 +5,8 @@ public class Codepoint {
     public String codepoint;
 
     public Codepoint(String codepoint) {
-        this.codepoint = codepoint.substring(2);
+        this.codepoint = codepoint.replace("U+", "");
+        this.codepoint = codepoint.replace("0x", "");
     }
 
     /**
@@ -19,8 +20,13 @@ public class Codepoint {
     }
 
     public String toUTF16() {
+        int codepoint16 = +Integer.parseInt(codepoint, 16);
+        //ranges for codepoints U+0000 to U+D7FF and U+E000 to U+FFFF (note the gap!)
+
+        if(this.codepoint )
         
-        return ""+ Integer.parseInt(codepoint, 16);
+
+        return "codepoint16";
 
     }
     

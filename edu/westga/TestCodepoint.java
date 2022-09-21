@@ -8,12 +8,12 @@ public class TestCodepoint {
 
     @Test
     public void test16() {
-        assertEquals("U+0000", new Codepoint("5").toUTF16());
+        assertEquals("D823DFFF".toLowerCase(), new Codepoint("18FFF").toUTF16().toLowerCase());
     }
 
     @Test
     public void test32() {
-        assertEquals("U+0000", new Codepoint("5").toUTF32());
+        assertEquals("00000005", new Codepoint("5").toUTF32());
     }
 
     @Test

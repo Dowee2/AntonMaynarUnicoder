@@ -8,17 +8,17 @@ public class TestCodepoint {
 
     @Test
     public void test16() {
-        assertEquals("D823DFFF".toLowerCase(), new Codepoint("18FFF").toUTF16().toLowerCase());
+        assertEquals("D823DFFF".toLowerCase(), new Codepoint("U+18FFF").toUTF16().toLowerCase());
     }
 
     @Test
     public void test32() {
-        assertEquals("00000005", new Codepoint("5").toUTF32());
+        assertEquals("00000005", new Codepoint("U+5").toUTF32());
     }
 
     @Test
     public void test8() {
-        assertEquals("OO4D", new Codepoint("M").toUTF8());
+        assertEquals("C6A0".toLowerCase(), new Codepoint("U+01A0").toUTF8().toLowerCase());
     }
     
 }
